@@ -171,6 +171,7 @@ def main():
             if st.button("Delete and Upload new file"):
                     if session_state.file_path:
                         os.remove(session_state.file_path)
+                        
                         st.success("File deleted successfully!")
                     else:
                         st.warning("No file uploaded to delete.")
@@ -181,8 +182,6 @@ def main():
 2. **Click on Upload:** After selecting your documents from your device, click the upload button to proceed.
 3. **Interact with Your Documents:**  Ask questions from your document.
 """)
-
-
     features = [
         {
             "title": "For Students",
