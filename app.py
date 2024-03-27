@@ -125,8 +125,12 @@ def main():
     st.set_page_config("Ask your PDF")
     
     st.header("Doc-Query - Interact with Your Documents")
+
+    
     
     st.image("assets/bot_read.jpg", use_column_width=True)
+
+
 
     session_state = SessionState (upload_button_clicked=False,file_path=None)
     user_question = ''
@@ -172,13 +176,60 @@ def main():
                         st.warning("No file uploaded to delete.")
                     session_state.upload_button_clicked = False
 
-    
-
     st.write("""
 1. **Upload Your Documents:** Select one or multiple PDF files and upload them to the platform.
 2. **Click on Upload:** After selecting your documents from your device, click the upload button to proceed.
 3. **Interact with Your Documents:**  Ask questions from your document.
 """)
+
+
+    features = [
+        {
+            "title": "For Students",
+            "description": "Prepare for exams and homework. Generate custom presentation outline and speaker notes for your presentations."
+        },
+        {
+            "title": "For Researchers",
+            "description": "Upload research papers and get information you need with just one click. Summarize paper abstract."
+        },
+        {
+            "title": "For Professionals",
+            "description": "Read contracts and financial reports 10X faster."
+        },
+        {
+            "title": "Cited Sources",
+            "description": "Answers based on PDF content with cited sources. No more scrolling to find the right page."
+        }
+    ]
+
+    # Display features in a table with three columns
+    num_features = len(features)
+    num_columns = 3
+    num_rows = (num_features + num_columns - 1) // num_columns
+
+    for i in range(num_rows):
+        st.write("<div style='display: flex;'>", unsafe_allow_html=True)
+        for j in range(num_columns):
+            index = i * num_columns + j
+            if index < num_features:
+                feature = features[index]
+                st.write(
+                    f"""
+                    <div style='flex: 1; margin: 10px; padding: 20px; border: 1px solid #ccc; border-radius: 10px;'>
+                        <h2>{feature["title"]}</h2>
+                        <p>{feature["description"]}</p>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+        st.write("</div>", unsafe_allow_html=True)
+
+
+
+
+    
+    
+
     user_question = st.text_input("Ask a Question")
 
     if st.button("Send"):
@@ -187,10 +238,7 @@ def main():
             llm = get_gemini_llm()
             st.write(get_response_llm(llm,faiss_index,user_question))
             st.success("Done")
-        
-                        
-
-
+    
 
 if __name__ == "__main__":
     main()
