@@ -122,7 +122,7 @@ class SessionState:
             setattr(self, key, val)
 
 def main():
-    st.set_page_config("Ask your PDF")
+    st.set_page_config("DocQuery")
     
     st.header("Doc-Query - Interact with Your Documents")
 
