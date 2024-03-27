@@ -16,12 +16,12 @@ from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import FAISS
 from langchain.chains import RetrievalQA
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 
-## Gemini Clients
+# ## Gemini Clients
 
-load_dotenv()
+# load_dotenv()
 api_key = os.environ.get('api_key')
 ## We will be suing Titan Embeddings Model To generate Embedding
 
