@@ -19,7 +19,7 @@ DocQuery is an application designed to facilitate document uploading and queryin
 ## Warning: Data Privacy and Security
 
 - **Sensitive Information**: Do not upload documents containing sensitive or confidential information.
-- **Data Handling**: Ensure that you have the necessary permissions to upload the data. If the documents contain sensitive or confidential information, refrain from uploading them. Additionally, make sure to delete the uploaded documents once the processing is completed to maintain data privacy and security.
+- **Data Handling**: Make sure to delete the uploaded documents once the processing is completed to maintain data privacy and security.
 
 ## Getting Started
 
