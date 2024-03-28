@@ -127,23 +127,27 @@ def main():
 3. **Interact with Your Documents:**  Ask questions from your document.
 """)
     features = [
-        {
-            "title": "For Students",
-            "description": "Prepare for exams and homework. Generate custom presentation outline and speaker notes for your presentations."
-        },
-        {
-            "title": "For Researchers",
-            "description": "Upload research papers and get information you need with just one click. Summarize paper abstract."
-        },
-        {
-            "title": "For Professionals",
-            "description": "Read contracts and financial reports 10X faster."
-        },
-        {
-            "title": "Cited Sources",
-            "description": "Answers based on PDF content with cited sources. No more scrolling to find the right page."
-        }
-    ]
+    {
+        "title": "For Students",
+        "description": "Prepare for exams and homework. Generate custom presentation outline and speaker notes for your presentations."
+    },
+    {
+        "title": "For Researchers",
+        "description": "Upload research papers and get information you need with just one click. Summarize paper abstract."
+    },
+    {
+        "title": "For Professionals",
+        "description": "Read contracts and financial reports 10X faster."
+    },
+    {
+        "title": "Cited Sources",
+        "description": "Answers based on PDF content with cited sources. No more scrolling to find the right page."
+    },
+    {
+        "title": "Warning: Data Confidentiality",
+        "description": "Do not upload confidential data. Ensure to delete all uploaded data once the task is completed to maintain privacy and security."
+    }
+]
 
     # Display features in a table with three columns
     num_features = len(features)
