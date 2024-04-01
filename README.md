@@ -1,5 +1,7 @@
 # DocQuery
 
+Demo Link : https://santhoshdocsquery.streamlit.app/
+
 DocQuery is an application designed to facilitate document uploading and querying for various use cases. It allows users to upload documents and ask questions related to the content of these documents. This versatile tool can be utilized across a wide range of scenarios, including but not limited to:
 
 - Document management systems
